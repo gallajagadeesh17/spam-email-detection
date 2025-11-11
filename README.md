@@ -35,23 +35,7 @@ It analyzes the text content of emails and classifies them using a trained ML mo
 
 ### 1️⃣ Clone the repository
 
-Example Output
 
-Input:
-
-“Congratulations! You have won a free iPhone. Click the link below to claim your prize!”
-
-Prediction:
-
-🟥 Spam
-
-Input:
-
-“Hey, can we reschedule our meeting for tomorrow?”
-
-Prediction:
-
-🟩 Not Spam
 
 ```bash
 git clone https://github.com/your-username/spam-email-detection.git
