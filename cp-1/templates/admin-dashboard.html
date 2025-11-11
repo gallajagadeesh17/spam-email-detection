@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <h2>Admin Dashboard</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+
+  <div class="dashboard">
+    <h3>Welcome, {{ name }}</h3>
+    <p>Total Registered Users: {{ total_users }}</p>
+    <button>View User Data</button>
+  </div>
+</body>
+</html>

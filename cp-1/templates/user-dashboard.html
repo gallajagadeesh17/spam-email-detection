@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <h2>Welcome, {{ name }}</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+
+<div class="dashboard">
+  <h3>Check Email for Spam</h3>
+
+  <form method="POST" action="{{ url_for('analyze') }}" class="spam-form">
+    <textarea name="email_text" placeholder="Paste email text here..." required></textarea>
+    <button type="submit">Analyze</button>
+  </form>
+
+  {% if result %}
+    <div class="result-box">
+      {% if result == 'spam' %}
+        <p style="color:#ff4d4d; font-weight:bold;">⚠️ This email is classified as SPAM!</p>
+      {% else %}
+        <p style="color:#4cc9f0; font-weight:bold;">✅ This email is SAFE (Not Spam).</p>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+</body>
+</html>
